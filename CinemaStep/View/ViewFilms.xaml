@@ -1,0 +1,63 @@
+﻿<Window x:Class="CinemaStep.View.ViewFilms"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CinemaStep.View" xmlns:ie1="http://schemas.microsoft.com/expression/2010/interactivity"
+        mc:Ignorable="d"
+        Title="ViewFilms" 
+        Height="550" 
+        Width="800"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None"
+        ResizeMode="NoResize">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#2e2b30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text=" All Films"
+                       FontSize="22"
+                       VerticalAlignment="Center"
+                       Foreground="LightGray"
+                       FontFamily="Comic sans ms"></TextBlock>
+            <Button Grid.Column="1"
+                    FontFamily="Comic sans ms"
+                    Template="{StaticResource withoutMouseOverBack}"
+                    Name="backBtn"
+                    Command="{Binding BackClickCommand}"></Button>
+        </Grid>
+        <Grid Grid.Row="1"
+              Name="grid">
+            <ListBox x:Name="mainListbox"
+                 ItemsSource="{Binding Films}" 
+                 ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
+                 Grid.Row="1"
+                 Background="Transparent"
+                 >
+                <ListBox.ItemsPanel>
+                    <ItemsPanelTemplate>
+                        <WrapPanel ></WrapPanel>
+                    </ItemsPanelTemplate>
+                </ListBox.ItemsPanel>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                            <StackPanel Grid.Row="0" >
+                                <Image x:Name="Image1" Width="200" Height="200" Margin="0,8,0,0" Source="{Binding ImagePath}"></Image>
+                            </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+                <ie1:Interaction.Triggers>
+                    <ie1:EventTrigger EventName="SelectionChanged">
+                        <ie1:InvokeCommandAction Command="{Binding SelectedItemChangedCommand}" CommandParameter="{Binding ElementName=mainListbox, Path=SelectedItem}" />
+                    </ie1:EventTrigger>
+                </ie1:Interaction.Triggers>
+            </ListBox>
+        </Grid>
+    </Grid>
+</Window>
