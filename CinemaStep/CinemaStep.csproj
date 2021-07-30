@@ -72,10 +72,14 @@
     <Compile Include="View Model\BookingsViewModel.cs" />
     <Compile Include="View Model\EditCustomerProfileViewModel.cs" />
     <Compile Include="View Model\MainWindowViewModel.cs" />
+    <Compile Include="View Model\ManagementWindowViewModel.cs" />
     <Compile Include="View Model\SignUpControlViewModel.cs" />
     <Compile Include="View Model\UserWindowViewModel.cs" />
     <Compile Include="View Model\ViewFilmsControlViewModel.cs" />
     <Compile Include="View Model\ViewFilmsViewModel.cs" />
+    <Compile Include="View\AddNewFilmWindow.xaml.cs">
+      <DependentUpon>AddNewFilmWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\BookingHistoryWindow.xaml.cs">
       <DependentUpon>BookingHistoryWindow.xaml</DependentUpon>
     </Compile>
@@ -84,6 +88,9 @@
     </Compile>
     <Compile Include="View\EditCustomerProfile.xaml.cs">
       <DependentUpon>EditCustomerProfile.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\ManagementView.xaml.cs">
+      <DependentUpon>ManagementView.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserWindow.xaml.cs">
       <DependentUpon>UserWindow.xaml</DependentUpon>
@@ -94,6 +101,10 @@
     <Compile Include="View\ViewFilmsControl.xaml.cs">
       <DependentUpon>ViewFilmsControl.xaml</DependentUpon>
     </Compile>
+    <Page Include="View\AddNewFilmWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="View\BookingHistoryWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -103,6 +114,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\EditCustomerProfile.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ManagementView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -228,6 +243,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Service\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\exportIcon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
