@@ -33,8 +33,6 @@ namespace CinemaStep.View_Model
             BackClickCommand = new RelayCommand((b) =>
             {
                 Helper.ViewFilms.Close();
-                UserWindow = new UserWindow();
-                UserWindow.ShowDialog();
             });
 
             SelectedItemChangedCommand = new RelayCommand((SelectedItem) => 

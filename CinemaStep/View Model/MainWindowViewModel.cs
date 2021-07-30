@@ -19,14 +19,15 @@ namespace CinemaStep.View_Model
         public RelayCommand ExitCommand { get; set; }
         public RelayCommand SubmitCommand { get; set; }
 
-        public MainWindowViewModel(Grid grid,MainWindow mainWindow)
+        public MainWindowViewModel(Grid grid, MainWindow mainWindow)
         {
-            Grid=grid;
+            Grid = grid;
             SignUpCommand = new RelayCommand((CC) =>
             {
                 SignUpControl signUpControl = new SignUpControl();
                 Grid.Children.Add(signUpControl);
                 Helper.MainWindow = mainWindow;
+
             });
 
             ExitCommand = new RelayCommand((e) =>
@@ -34,7 +35,7 @@ namespace CinemaStep.View_Model
                 mainWindow.Close();
             });
 
-            SubmitCommand = new RelayCommand((b) => 
+            SubmitCommand = new RelayCommand((b) =>
             {
                 foreach (var item in FakeRepo.Users)
                 {
@@ -43,6 +44,7 @@ namespace CinemaStep.View_Model
                         UserWindow.nameTxtb.Text = $"{item.Name}";
                         UserWindow.surenameTxtb.Text = $"{item.Surename}";
                         UserWindow.ShowDialog();
+                        mainWindow.Close();
                     }
                 }
             });
