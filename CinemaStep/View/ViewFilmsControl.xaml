@@ -20,8 +20,8 @@
         </Border>
         <Grid Grid.Column="1">
             <Grid.RowDefinitions>
-                <RowDefinition Height="6*"/>
-                <RowDefinition Height="4*"/>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="5*"/>
             </Grid.RowDefinitions>
             <StackPanel>
                 <Label Foreground="White"
@@ -47,8 +47,18 @@
                            FontSize="22"
                            Foreground="White"></Label>
                 </WrapPanel>
+                <WrapPanel >
+                    <Label Content="To:"
+                           FontFamily="comic sans ms"
+                           FontSize="22"
+                           Foreground="White"></Label>
+                    <Label Content="Date"
+                           FontFamily="comic sans ms"
+                           FontSize="22"
+                           Foreground="White"></Label>
+                </WrapPanel>
                 <WrapPanel>
-                    <Label Content="From:"
+                    <Label Content="Times:"
                            FontFamily="comic sans ms"
                            FontSize="22"
                            Foreground="White"></Label>
@@ -59,7 +69,7 @@
                 </WrapPanel>
                 <WrapPanel Width="350"
                            HorizontalAlignment="Left">
-                    <Label Content="From:"
+                    <Label Content="IMDB:"
                            FontFamily="comic sans ms"
                            FontSize="22"
                            Foreground="White"></Label>
@@ -71,10 +81,11 @@
                 <Button Content="Book Now"
                         Width="150"
                         Height="50"
-                        Margin="350,0,0,0"
+                        Margin="350,7,0,0"
                         Foreground="Black"
                         FontFamily="comic sans ms"
                         Background="White"
+                        FontSize="26"
                         Style="{StaticResource InformButton}"
                         Command="{Binding BookNowCommand}"></Button>
             </StackPanel>

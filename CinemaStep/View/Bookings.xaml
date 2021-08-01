@@ -13,12 +13,7 @@
         WindowStartupLocation="CenterScreen"
         ResizeMode="NoResize"
         >
-   
     <Grid>
-        
-
-            
-        
         <Grid.RowDefinitions>
             <RowDefinition/>
             <RowDefinition Height="9*"/>
@@ -116,51 +111,23 @@
                       Panel.ZIndex="1"
                       Margin="50,0,40,0">
                     <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="0.15*"/>
-                        <ColumnDefinition />
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
-                        <ColumnDefinition/>
                         <ColumnDefinition/>
                         <ColumnDefinition/>
                     </Grid.ColumnDefinitions>
-                    <Grid.RowDefinitions>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition/>
-                        <RowDefinition Height="50"/>
-                    </Grid.RowDefinitions>
-                    <Button Panel.ZIndex="1" 
-                            Template="{StaticResource withoutMouseOverChair}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="108"
-                            Height="99"
-                            Grid.Row="0"
-                            Grid.Column="1">
-                    </Button>
-                    <Image Width="108"
-                           Height="99"
-                           Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="0"
-                           Grid.Column="1">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
-                            Template="{StaticResource withoutMouseOverChair}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="108"
-                            Height="99"
-                            Grid.Row="0"
-                            Grid.Column="2">
-                    </Button>
-                    <Image Width="108"
-                           Height="99"
-                           Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="0"
-                           Grid.Column="2">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
+                    <Grid Margin="0,0,0,0">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="25"/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Button Panel.ZIndex="1" 
                             Template="{StaticResource withoutMouseOverChair}"
                             Background="Transparent"
                             BorderThickness="0"
@@ -168,89 +135,13 @@
                             Height="99"
                             Grid.Row="0"
                             Grid.Column="3">
-                    </Button>
-                    <Image Width="108"
+                        </Button>
+                        <Image Width="108"
                            Height="99"
                            Source="../Images/cinemaSeatIconGreen.png"
                            Grid.Row="0"
-                           Grid.Column="3">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
-                            Template="{StaticResource withoutMouseOverChair}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="108"
-                            Height="99"
-                            Grid.Row="0"
-                            Grid.Column="4">
-                    </Button>
-                    <Image Width="108"
-                           Height="99"
-                           Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="0"
-                           Grid.Column="4">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
-                            Template="{StaticResource withoutMouseOverChair}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="108"
-                            Height="99"
-                            Grid.Row="0"
-                            Grid.Column="5">
-                    </Button>
-                    <Image Width="108"
-                           Height="99"
-                           Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="0"
-                           Grid.Column="5">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
-                            Template="{StaticResource withoutMouseOverChair}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="108"
-                            Height="99"
-                            Grid.Row="0"
-                            Grid.Column="6">
-                    </Button>
-                    <Image Width="108"
-                           Height="99"
-                           Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="0"
-                           Grid.Column="6">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
-                            Template="{StaticResource withoutMouseOverChair}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="108"
-                            Height="99"
-                            Grid.Row="1"
-                            Grid.Column="1">
-                    </Button>
-                    <Image Width="108"
-                           Height="99"
-                           Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="1"
-                           Grid.Column="1">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
-                            Template="{StaticResource withoutMouseOverChair}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="108"
-                            Height="99"
-                            Grid.Row="1"
-                            Grid.Column="2">
-                    </Button>
-                    <Image Width="108"
-                           Height="99"
-                           Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="1"
-                           Grid.Column="2">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
+                           Grid.Column="3"></Image>
+                        <Button Panel.ZIndex="1" 
                             Template="{StaticResource withoutMouseOverChair}"
                             Background="Transparent"
                             BorderThickness="0"
@@ -258,89 +149,69 @@
                             Height="99"
                             Grid.Row="1"
                             Grid.Column="3">
-                    </Button>
-                    <Image Width="108"
+                        </Button>
+                        <Image Width="108"
                            Height="99"
                            Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="1"
-                           Grid.Column="3">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
+                           Grid.Row="0"
+                           Grid.Column="1"></Image>
+                        <Button Panel.ZIndex="1" 
                             Template="{StaticResource withoutMouseOverChair}"
                             Background="Transparent"
                             BorderThickness="0"
                             Width="108"
                             Height="99"
-                            Grid.Row="1"
-                            Grid.Column="4">
-                    </Button>
-                    <Image Width="108"
-                           Height="99"
-                           Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="1"
-                           Grid.Column="4">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
-                            Template="{StaticResource withoutMouseOverChair}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="108"
-                            Height="99"
-                            Grid.Row="1"
-                            Grid.Column="5">
-                    </Button>
-                    <Image Width="108"
-                           Height="99"
-                           Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="1"
-                           Grid.Column="5">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
-                            Template="{StaticResource withoutMouseOverChair}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="108"
-                            Height="99"
-                            Grid.Row="1"
-                            Grid.Column="6">
-                    </Button>
-                    <Image Width="108"
-                           Height="99"
-                           Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="1"
-                           Grid.Column="6">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
-                            Template="{StaticResource withoutMouseOverChair}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="108"
-                            Height="99"
-                            Grid.Row="2"
-                            Grid.Column="1">
-                    </Button>
-                    <Image Width="108"
-                           Height="99"
-                           Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="2"
-                           Grid.Column="1">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
-                            Template="{StaticResource withoutMouseOverChair}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="108"
-                            Height="99"
-                            Grid.Row="2"
+                            Grid.Row="0"
                             Grid.Column="2">
-                    </Button>
-                    <Image Width="108"
+                        </Button>
+                        <Image Width="108"
                            Height="99"
                            Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="2"
-                           Grid.Column="2">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
+                           Grid.Row="0"
+                           Grid.Column="2"></Image>
+                        <Button Panel.ZIndex="1" 
+                            Template="{StaticResource withoutMouseOverChair}"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="108"
+                            Height="99"
+                            Grid.Row="1"
+                            Grid.Column="3">
+                        </Button>
+                        <Image Width="108"
+                           Height="99"
+                           Source="../Images/cinemaSeatIconGreen.png"
+                           Grid.Row="1"
+                           Grid.Column="3"></Image>
+                        <Button Panel.ZIndex="1" 
+                            Template="{StaticResource withoutMouseOverChair}"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="108"
+                            Height="99"
+                            Grid.Row="1"
+                            Grid.Column="1">
+                        </Button>
+                        <Image Width="108"
+                           Height="99"
+                           Source="../Images/cinemaSeatIconGreen.png"
+                           Grid.Row="1"
+                           Grid.Column="1"></Image>
+                        <Button Panel.ZIndex="1" 
+                            Template="{StaticResource withoutMouseOverChair}"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="108"
+                            Height="99"
+                            Grid.Row="1"
+                            Grid.Column="2">
+                        </Button>
+                        <Image Width="108"
+                           Height="99"
+                           Source="../Images/cinemaSeatIconGreen.png"
+                           Grid.Row="1"
+                           Grid.Column="2"></Image>
+                        <Button Panel.ZIndex="1" 
                             Template="{StaticResource withoutMouseOverChair}"
                             Background="Transparent"
                             BorderThickness="0"
@@ -348,67 +219,190 @@
                             Height="99"
                             Grid.Row="2"
                             Grid.Column="3">
-                    </Button>
-                    <Image Width="108"
+                        </Button>
+                        <Image Width="108"
                            Height="99"
                            Source="../Images/cinemaSeatIconGreen.png"
                            Grid.Row="2"
-                           Grid.Column="3">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
+                           Grid.Column="3"></Image>
+                        <Button Panel.ZIndex="1" 
                             Template="{StaticResource withoutMouseOverChair}"
                             Background="Transparent"
                             BorderThickness="0"
                             Width="108"
                             Height="99"
                             Grid.Row="2"
-                            Grid.Column="4">
-                    </Button>
-                    <Image Width="108"
+                            Grid.Column="1">
+                        </Button>
+                        <Image Width="108"
                            Height="99"
                            Source="../Images/cinemaSeatIconGreen.png"
                            Grid.Row="2"
-                           Grid.Column="4">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
+                           Grid.Column="1"></Image>
+                        <Button Panel.ZIndex="1" 
                             Template="{StaticResource withoutMouseOverChair}"
                             Background="Transparent"
                             BorderThickness="0"
                             Width="108"
                             Height="99"
                             Grid.Row="2"
-                            Grid.Column="5">
-                    </Button>
-                    <Image Width="108"
+                            Grid.Column="2">
+                        </Button>
+                        <Image Width="108"
                            Height="99"
                            Source="../Images/cinemaSeatIconGreen.png"
                            Grid.Row="2"
-                           Grid.Column="5">
-                    </Image>
-                    <Button Panel.ZIndex="1" 
+                           Grid.Column="2"></Image>
+                        <TextBlock Text="A" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
+                        <TextBlock Text="B" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1"></TextBlock>
+                        <TextBlock Text="C" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2"></TextBlock>
+                        <TextBlock Text="1" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4"></TextBlock>
+                        <TextBlock Text="2" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="4"></TextBlock>
+                        <TextBlock Text="3" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="4"></TextBlock>
+                    </Grid>
+                    <Grid Margin="25,0,0,0"
+                          Grid.Column="1">
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                            <ColumnDefinition/>
+                        </Grid.ColumnDefinitions>
+                        <Grid.RowDefinitions>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition/>
+                            <RowDefinition Height="50"/>
+                        </Grid.RowDefinitions>
+                        <Button Panel.ZIndex="1" 
+                            Template="{StaticResource withoutMouseOverChair}"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="108"
+                            Height="99"
+                            Grid.Row="0"
+                            Grid.Column="0">
+                        </Button>
+                        <Image Width="108"
+                           Height="99"
+                           Source="../Images/cinemaSeatIconGreen.png"
+                           Grid.Row="0"
+                           Grid.Column="0"></Image>
+                        <Button Panel.ZIndex="1" 
+                            Template="{StaticResource withoutMouseOverChair}"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="108"
+                            Height="99"
+                            Grid.Row="1"
+                            Grid.Column="3">
+                        </Button>
+                        <Image Width="108"
+                           Height="99"
+                           Source="../Images/cinemaSeatIconGreen.png"
+                           Grid.Row="0"
+                           Grid.Column="1"></Image>
+                        <Button Panel.ZIndex="1" 
+                            Template="{StaticResource withoutMouseOverChair}"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="108"
+                            Height="99"
+                            Grid.Row="0"
+                            Grid.Column="2">
+                        </Button>
+                        <Image Width="108"
+                           Height="99"
+                           Source="../Images/cinemaSeatIconGreen.png"
+                           Grid.Row="0"
+                           Grid.Column="2"></Image>
+                        <Button Panel.ZIndex="1" 
+                            Template="{StaticResource withoutMouseOverChair}"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="108"
+                            Height="99"
+                            Grid.Row="1"
+                            Grid.Column="3">
+                        </Button>
+                        <Image Width="108"
+                           Height="99"
+                           Source="../Images/cinemaSeatIconGreen.png"
+                           Grid.Row="1"
+                           Grid.Column="3"></Image>
+                        <Button Panel.ZIndex="1" 
+                            Template="{StaticResource withoutMouseOverChair}"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="108"
+                            Height="99"
+                            Grid.Row="1"
+                            Grid.Column="1">
+                        </Button>
+                        <Image Width="108"
+                           Height="99"
+                           Source="../Images/cinemaSeatIconGreen.png"
+                           Grid.Row="1"
+                           Grid.Column="1"></Image>
+                        <Button Panel.ZIndex="1" 
+                            Template="{StaticResource withoutMouseOverChair}"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="108"
+                            Height="99"
+                            Grid.Row="1"
+                            Grid.Column="0">
+                        </Button>
+                        <Image Width="108"
+                           Height="99"
+                           Source="../Images/cinemaSeatIconGreen.png"
+                           Grid.Row="1"
+                           Grid.Column="0"></Image>
+                        <Button Panel.ZIndex="1" 
                             Template="{StaticResource withoutMouseOverChair}"
                             Background="Transparent"
                             BorderThickness="0"
                             Width="108"
                             Height="99"
                             Grid.Row="2"
-                            Grid.Column="6">
-                    </Button>
-                    <Image Width="108"
+                            Grid.Column="3">
+                        </Button>
+                        <Image Width="108"
                            Height="99"
                            Source="../Images/cinemaSeatIconGreen.png"
                            Grid.Row="2"
-                           Grid.Column="6">
-                    </Image>
-                    <TextBlock Text="A" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center"></TextBlock>
-                    <TextBlock Text="B" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="1"></TextBlock>
-                    <TextBlock Text="C" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="2"></TextBlock>
-                    <TextBlock Text="1" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4"></TextBlock>
-                    <TextBlock Text="2" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="4"></TextBlock>
-                    <TextBlock Text="3" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="3" Grid.Row="4"></TextBlock>
-                    <TextBlock Text="4" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="4" Grid.Row="4"></TextBlock>
-                    <TextBlock Text="5" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="5" Grid.Row="4"></TextBlock>
-                    <TextBlock Text="6" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="6" Grid.Row="4"></TextBlock>
+                           Grid.Column="3"></Image>
+                        <Button Panel.ZIndex="1" 
+                            Template="{StaticResource withoutMouseOverChair}"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="108"
+                            Height="99"
+                            Grid.Row="2"
+                            Grid.Column="1">
+                        </Button>
+                        <Image Width="108"
+                           Height="99"
+                           Source="../Images/cinemaSeatIconGreen.png"
+                           Grid.Row="2"
+                           Grid.Column="1"></Image>
+                        <Button Panel.ZIndex="1" 
+                            Template="{StaticResource withoutMouseOverChair}"
+                            Background="Transparent"
+                            BorderThickness="0"
+                            Width="108"
+                            Height="99"
+                            Grid.Row="2"
+                            Grid.Column="0">
+                        </Button>
+                        <Image Width="108"
+                           Height="99"
+                           Source="../Images/cinemaSeatIconGreen.png"
+                           Grid.Row="2"
+                           Grid.Column="0"></Image>
+                        <TextBlock Text="4" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Grid.Row="4"></TextBlock>
+                        <TextBlock Text="5" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="1" Grid.Row="4"></TextBlock>
+                        <TextBlock Text="6" FontFamily="comic sans ms" FontSize="26" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="2" Grid.Row="4"></TextBlock>
+                    </Grid>
                 </Grid>
                 <WrapPanel>
                     <StackPanel Margin="270,40,0,0">
