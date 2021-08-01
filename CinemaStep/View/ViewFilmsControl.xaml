@@ -75,7 +75,8 @@
                         Foreground="Black"
                         FontFamily="comic sans ms"
                         Background="White"
-                        Style="{StaticResource InformButton}"></Button>
+                        Style="{StaticResource InformButton}"
+                        Command="{Binding BookNowCommand}"></Button>
             </StackPanel>
         </Grid>
     </Grid>

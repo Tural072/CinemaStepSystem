@@ -1,4 +1,5 @@
-﻿using CinemaStep.View;
+﻿using CinemaStep.Model;
+using CinemaStep.View;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,7 +13,9 @@ namespace CinemaStep.Extension
         public static MainWindow MainWindow { get; set; }
         public static UserWindow UserWindow { get; set; }
         public static ViewFilms ViewFilms { get; set; }
-        public static BookingHistoryWindow BookingHistoryWindow { get; set; }
+        public static ViewFilmsControl ViewFilmsControl { get; set; }
+        public static Bookings Bookings { get; set; }
+        public static Film Film { get; set; }
 
     }
 }

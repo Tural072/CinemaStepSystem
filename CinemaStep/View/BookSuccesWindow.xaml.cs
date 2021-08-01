@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace CinemaStep.View
 {
     /// <summary>
-    /// Interaction logic for BookingHistoryWindow.xaml
+    /// Interaction logic for BookSuccesWindow.xaml
     /// </summary>
-    public partial class BookingHistoryWindow : Window
+    public partial class BookSuccesWindow : Window
     {
-        public BookingHistoryWindow()
+        public BookSuccesWindow()
         {
             InitializeComponent();
         }

@@ -25,12 +25,12 @@ namespace CinemaStep.View_Model
         public RelayCommand ViewFilmCommand { get; set; }
         public UserWindowViewModel(UserWindow userWindow)
         {
+           Helper.UserWindow = userWindow;
            LogOutCommand = new RelayCommand((lB) =>
            {
                userWindow.Close();
-               MainWindow = new MainWindow();
                Helper.MainWindow.MainGrid.Children.RemoveAt(1);
-               MainWindow.ShowDialog();
+               Helper.MainWindow.Visibility=System.Windows.Visibility.Visible;
            });
 
            UploadPhotoCommand = new RelayCommand((u) => {

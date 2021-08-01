@@ -25,7 +25,7 @@ namespace CinemaStep.View
         {
             InitializeComponent();
             Helper.ViewFilms = this;
-            DataContext = new ViewFilmsViewModel();
+            DataContext = new ViewFilmsViewModel(this);
         }
 
        

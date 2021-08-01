@@ -38,6 +38,9 @@
     <Reference Include="Microsoft.Expression.Interactions, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Windows.Interactivity.WPF.2.0.20525\lib\net40\Microsoft.Expression.Interactions.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.13.0.1\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Windows.Interactivity, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -68,8 +71,8 @@
     <Compile Include="Model\User.cs" />
     <Compile Include="Repository\FakeRepo.cs" />
     <Compile Include="View Model\BaseViewModel.cs" />
-    <Compile Include="View Model\BookingHistoryWindowViewModel.cs" />
     <Compile Include="View Model\BookingsViewModel.cs" />
+    <Compile Include="View Model\BookSuccesViewModel.cs" />
     <Compile Include="View Model\EditCustomerProfileViewModel.cs" />
     <Compile Include="View Model\MainWindowViewModel.cs" />
     <Compile Include="View Model\ManagementWindowViewModel.cs" />
@@ -80,11 +83,11 @@
     <Compile Include="View\AddNewFilmWindow.xaml.cs">
       <DependentUpon>AddNewFilmWindow.xaml</DependentUpon>
     </Compile>
-    <Compile Include="View\BookingHistoryWindow.xaml.cs">
-      <DependentUpon>BookingHistoryWindow.xaml</DependentUpon>
-    </Compile>
     <Compile Include="View\Bookings.xaml.cs">
       <DependentUpon>Bookings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\BookSucces.xaml.cs">
+      <DependentUpon>BookSucces.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\EditCustomerProfile.xaml.cs">
       <DependentUpon>EditCustomerProfile.xaml</DependentUpon>
@@ -105,11 +108,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\BookingHistoryWindow.xaml">
+    <Page Include="View\Bookings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="View\Bookings.xaml">
+    <Page Include="View\BookSucces.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

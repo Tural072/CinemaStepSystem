@@ -1,5 +1,4 @@
-﻿using CinemaStep.Extension;
-using CinemaStep.View_Model;
+﻿using CinemaStep.View_Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -12,21 +11,19 @@ using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
 
 namespace CinemaStep.View
 {
     /// <summary>
-    /// Interaction logic for ViewFilmsControl.xaml
+    /// Interaction logic for BookSucces.xaml
     /// </summary>
-    public partial class ViewFilmsControl : UserControl
+    public partial class BookSucces : Window
     {
-        public ViewFilmsControl()
+        public BookSucces()
         {
             InitializeComponent();
-            DataContext = new ViewFilmsControlViewModel();
-            Helper.ViewFilmsControl = this;
+            DataContext = new BookSuccesViewModel(this);
         }
     }
 }

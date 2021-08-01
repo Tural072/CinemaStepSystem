@@ -32,32 +32,45 @@
                     Name="backBtn"
                     Command="{Binding BackClickCommand}"></Button>
         </Grid>
-        <Grid Grid.Row="1"
-              Name="grid">
-            <ListBox x:Name="mainListbox"
-                 ItemsSource="{Binding Films}" 
-                 ScrollViewer.HorizontalScrollBarVisibility="Disabled" 
-                 Grid.Row="1"
-                 Background="Transparent"
-                 >
-                <ListBox.ItemsPanel>
-                    <ItemsPanelTemplate>
-                        <WrapPanel ></WrapPanel>
-                    </ItemsPanelTemplate>
-                </ListBox.ItemsPanel>
-                <ListBox.ItemTemplate>
-                    <DataTemplate>
-                            <StackPanel Grid.Row="0" >
-                                <Image x:Name="Image1" Width="200" Height="200" Margin="0,8,0,0" Source="{Binding ImagePath}"></Image>
-                            </StackPanel>
-                    </DataTemplate>
-                </ListBox.ItemTemplate>
-                <ie1:Interaction.Triggers>
-                    <ie1:EventTrigger EventName="SelectionChanged">
-                        <ie1:InvokeCommandAction Command="{Binding SelectedItemChangedCommand}" CommandParameter="{Binding ElementName=mainListbox, Path=SelectedItem}" />
-                    </ie1:EventTrigger>
-                </ie1:Interaction.Triggers>
-            </ListBox>
+        <Grid x:Name="grid"
+              Grid.Row="1">
+            <StackPanel
+              >
+                <WrapPanel>
+                    <TextBlock Foreground="WhiteSmoke"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="24"
+                           Margin="100,0,0,0"
+                           FontFamily="comic sans ms">Search</TextBlock>
+                    <TextBox Width="300"
+                         Height="40"
+                         Margin="10,0,0,0"
+                             Name="searchTxtbox"
+                         Template="{StaticResource TextBoxBaseControlTemplate}"></TextBox>
+                    <Button Margin="10"
+                        Style="{StaticResource InformButton}"
+                        Background="Black"
+                        FontFamily="comic sans ms"
+                        Command="{Binding SearchCommand}">GO</Button>
+                </WrapPanel>
+                <Image Width="250"
+                   Height="350"
+                       Name="mainImg"
+                       ></Image>
+                <TextBlock x:Name="filmNameTxtb"
+                       FontFamily="comic sans ms"
+                       FontSize="24"
+                       Foreground="White"
+                       HorizontalAlignment="Center"></TextBlock>
+                <Button Margin="10"
+                        Style="{StaticResource InformButton}"
+                        Background="Black"
+                        FontFamily="comic sans ms"
+                        FontSize="24"
+                        HorizontalAlignment="Right"
+                        Command="{Binding SelectedItemChangedCommand}">More Information</Button>
+            </StackPanel>
         </Grid>
     </Grid>
 </Window>

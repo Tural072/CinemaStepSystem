@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CinemaStep.Extension;
+using CinemaStep.View_Model;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -25,13 +27,11 @@ namespace CinemaStep.View
         public Bookings()
         {
             InitializeComponent();
+            DataContext = new BookingsViewModel(this);
+            Helper.Bookings = this;
         }
 
-        private void backBtn_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
+       
         public class Ticker : INotifyPropertyChanged
         {
             public Ticker()

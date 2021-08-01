@@ -43,7 +43,7 @@ namespace CinemaStep.View_Model
                 userWindow.surenameTxtb.Text = user.Surename;
                 FakeRepo.User = user;
                 FakeRepo.Users.Add(user);
-                Helper.MainWindow.Close();
+                Helper.MainWindow.Visibility=System.Windows.Visibility.Hidden;
                 userWindow.ShowDialog();
             });
 
