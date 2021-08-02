@@ -137,11 +137,11 @@
                         <Button Background="#2e2b30"
                             Foreground="LightGray"
                             FontSize="26"
-                            Content="Export Film List"
+                            Content="Add Film"
                             Height="50"
                             Margin="10,0,10,5"
                             FontFamily="Comic sans ms"
-                                Command="{Binding ViewFilmCommand}"
+                                Command="{Binding AddCommand}"
                                 Style="{StaticResource InformButton}"></Button>
                     </Grid>
                     <Grid>
@@ -153,7 +153,7 @@
                         <Button Background="#2e2b30"
                             Foreground="LightGray"
                             FontSize="26"
-                            Content="Manage Films"
+                            Content="Remove Film"
                             Height="50"
                             Margin="10,0,10,5"
                             FontFamily="Comic sans ms"
@@ -168,7 +168,7 @@
                         <Button Background="#2e2b30"
                             Foreground="LightGray"
                             FontSize="26"
-                            Content="Manage Bookings"
+                            Content="View Current Films"
                             Height="50"
                             Margin="10,0,10,0"
                             FontFamily="Comic sans ms"

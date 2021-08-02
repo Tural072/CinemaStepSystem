@@ -13,5 +13,6 @@ namespace CinemaStep.Model
         public string Description { get; set; }
         public double Imdb { get; set; }
         public string ImagePath { get; set; }
+        public List<string> Time { get; set; }
     }
 }

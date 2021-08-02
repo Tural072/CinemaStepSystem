@@ -1,9 +1,11 @@
 ﻿using CinemaStep.Command;
 using CinemaStep.Extension;
+using CinemaStep.Model;
 using CinemaStep.Repository;
 using CinemaStep.View;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -18,9 +20,12 @@ namespace CinemaStep.View_Model
         public RelayCommand SignUpCommand { get; set; }
         public RelayCommand ExitCommand { get; set; }
         public RelayCommand SubmitCommand { get; set; }
+        public ObservableCollection<Admin> Admins { get; set; } = new ObservableCollection<Admin>();
 
         public MainWindowViewModel(Grid grid, MainWindow mainWindow)
         {
+            ManagementView managementView = new ManagementView();
+            Admins = FakeRepo.GetAdmins();
             Grid = grid;
             SignUpCommand = new RelayCommand((CC) =>
             {
@@ -45,6 +50,15 @@ namespace CinemaStep.View_Model
                         UserWindow.surenameTxtb.Text = $"{item.Surename}";
                         UserWindow.ShowDialog();
                         mainWindow.Close();
+                    }
+                }
+                foreach (var item in Admins)
+                {
+                    if (item.Email == mainWindow.nameTxtbx.Text && item.Password == mainWindow.surenameTxtbx.Text)
+                    {
+                        managementView.nameTxtb.Text = item.Name;
+                        managementView.surenameTxtb.Text = item.Surename;
+                        managementView.ShowDialog();
                     }
                 }
             });

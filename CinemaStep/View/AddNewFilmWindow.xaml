@@ -5,8 +5,73 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CinemaStep.View"
         mc:Ignorable="d"
-        Title="AddNewFilmWindow" Height="450" Width="800">
-    <Grid>
-        
+        Title="AddNewFilmWindow" Height="550" Width="800"  WindowStyle="None"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterScreen">
+    <Grid Background="Black">
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="9*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="#2e2b30">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="9*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <TextBlock Text=" All Films"
+                       FontSize="22"
+                       VerticalAlignment="Center"
+                       Foreground="LightGray"
+                       FontFamily="Comic sans ms"></TextBlock>
+            <Button Grid.Column="1"
+                    FontFamily="Comic sans ms"
+                    Template="{StaticResource withoutMouseOverBack}"
+                    Name="backBtn"
+                    Command="{Binding BackClickCommand}"></Button>
+        </Grid>
+        <Grid x:Name="grid"
+              Grid.Row="1">
+            <StackPanel
+              >
+                <WrapPanel>
+                    <TextBlock Foreground="WhiteSmoke"
+                           HorizontalAlignment="Center"
+                           VerticalAlignment="Center"
+                           FontSize="20"
+                           Margin="170,0,0,0"
+                           FontFamily="comic sans ms">Search</TextBlock>
+                    <TextBox Width="300"
+                         Height="40"
+                         Margin="10,0,0,0"
+                         Name="searchTxtbox"
+                         FontSize="20"
+                         Template="{StaticResource TextBoxBaseControlTemplate}"></TextBox>
+                    <Button Margin="10"
+                        Style="{StaticResource InformButton}"
+                        Background="White"
+                        FontFamily="comic sans ms"
+                        Command="{Binding SearchCommand}"
+                        Width="60"
+                        Height="35"
+                        FontSize="20">GO</Button>
+                </WrapPanel>
+                <Image Width="250"
+                   Height="350"
+                       Name="mainImg"
+                       ></Image>
+                <TextBlock x:Name="filmNameTxtb"
+                       FontFamily="comic sans ms"
+                       FontSize="24"
+                       Foreground="White"
+                       HorizontalAlignment="Center"></TextBlock>
+                <Button Margin="10"
+                        Style="{StaticResource InformButton}"
+                        Background="White"
+                        FontFamily="comic sans ms"
+                        FontSize="24"
+                        HorizontalAlignment="Right"
+                        Command="{Binding SelectedItemChangedCommand}">Add Film</Button>
+            </StackPanel>
+        </Grid>
     </Grid>
 </Window>

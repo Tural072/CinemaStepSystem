@@ -66,10 +66,12 @@
     </ApplicationDefinition>
     <Compile Include="Command\RelayCommand.cs" />
     <Compile Include="Extension\Helper.cs" />
+    <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Entity.cs" />
     <Compile Include="Model\Film.cs" />
     <Compile Include="Model\User.cs" />
     <Compile Include="Repository\FakeRepo.cs" />
+    <Compile Include="View Model\AddNewFilmViewModel.cs" />
     <Compile Include="View Model\BaseViewModel.cs" />
     <Compile Include="View Model\BookingsViewModel.cs" />
     <Compile Include="View Model\BookSuccesViewModel.cs" />

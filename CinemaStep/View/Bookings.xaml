@@ -65,7 +65,8 @@
                                FontFamily="Comic sans ms"
                                FontSize="20"></TextBlock>
                         <ComboBox Height="40"
-                                Margin="10,5,10,10"></ComboBox>
+                                  Margin="10,5,10,10"
+                                  Name="timeComboBox"></ComboBox>
                     </StackPanel>
                     <StackPanel></StackPanel>
 

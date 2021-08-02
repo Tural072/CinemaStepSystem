@@ -59,42 +59,7 @@ namespace CinemaStep.View_Model
                 Helper.ViewFilms.grid.Children.Add(viewFilmsControl);
             });
 
-            SearchCommand = new RelayCommand((sc) =>
-            {
-                Helper.Film = new Film();
-                try
-                {
-                    Film = new Film();
-                    Films = new ObservableCollection<Film>();
-                    HttpResponseMessage response = new HttpResponseMessage();
-                    response =
-                    http.GetAsync($@"http://www.omdbapi.com/?apikey=ddee1dae&s={viewFilms.searchTxtbox.Text}&plot=full").Result;
-                    var str = response.Content.ReadAsStringAsync().Result;
-                    Data = JsonConvert.DeserializeObject(str);
-                    response =
-                    http.GetAsync($@"http://www.omdbapi.com/?apikey=ddee1dae&t={Data.Search[0].Title}&plot=full").Result;
-                    str = response.Content.ReadAsStringAsync().Result;
-                    SingleData = JsonConvert.DeserializeObject(str);
-
-
-
-                    ImagePath = SingleData.Poster;
-                    Minute = SingleData.Runtime;
-                    Description = SingleData.Genre;
-
-
-
-                    viewFilms.mainImg.Source = new BitmapImage(new Uri(
-                    ImagePath, UriKind.RelativeOrAbsolute));
-                    viewFilms.filmNameTxtb.Text = SingleData.Title;
-                    Helper.Film.Name = SingleData.Title;
-                    Helper.Film.ImagePath = SingleData.Poster;
-                    Helper.Film.Description = SingleData.Genre;
-                }
-                catch (Exception)
-                {
-                }
-            });
+            
 
          
         }
