@@ -1,16 +1,25 @@
 ﻿using CinemaStep.Command;
+using CinemaStep.Model;
+using CinemaStep.Repository;
+using CinemaStep.Service;
 using CinemaStep.View;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Media.Imaging;
 
 namespace CinemaStep.View_Model
 {
     public class ManagementWindowViewModel : BaseViewModel
     {
         public RelayCommand AddCommand { get; set; }
+        public RelayCommand UploadCommand { get; set; }
+        public RelayCommand LogOutCommand { get; set; }
+        public RelayCommand SendMailCommand { get; set; }
+        public RelayCommand EditCommand { get; set; }
         public ManagementWindowViewModel(ManagementView managementView)
         {
             AddCommand = new RelayCommand((a) =>
@@ -18,6 +27,36 @@ namespace CinemaStep.View_Model
                 managementView.Close();
                 AddNewFilmWindow addNewFilmWindow = new AddNewFilmWindow();
                 addNewFilmWindow.ShowDialog();
+            });
+
+            UploadCommand = new RelayCommand((u) =>
+            {
+                OpenFileDialog op = new OpenFileDialog();
+                op.Title = "Select a picture";
+                op.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+                if (op.ShowDialog() == true)
+                {
+                    managementView.profilePhoto.Source = new BitmapImage(new Uri(op.FileName));
+                }
+            });
+
+            SendMailCommand = new RelayCommand((s) =>
+            {
+                SendMailService.SendMail1(FakeRepo.Admin.Email);
+            });
+
+            LogOutCommand = new RelayCommand((s) =>
+            {
+                managementView.Close();
+                MainWindow mainWindow = new MainWindow();
+                mainWindow.ShowDialog();
+            });
+
+            EditCommand = new RelayCommand((s) =>
+            {
+                ManagementView managementView1 = new ManagementView();
+                FakeRepo.OldAdmin = FakeRepo.Admin;
+                managementView1.ShowDialog();
             });
         }
     }

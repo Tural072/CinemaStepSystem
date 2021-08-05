@@ -56,6 +56,7 @@ namespace CinemaStep.View_Model
                 {
                     if (item.Email == mainWindow.nameTxtbx.Text && item.Password == mainWindow.surenameTxtbx.Text)
                     {
+                        FakeRepo.Admin = item;
                         managementView.nameTxtb.Text = item.Name;
                         managementView.surenameTxtb.Text = item.Surename;
                         managementView.ShowDialog();

@@ -88,11 +88,14 @@
                            Width="40"
                            Height="30"
                            Margin="10,0,0,0"></Image>
-                    <TextBlock FontSize="18" 
+                    <Button FontSize="18" 
                            Margin="10"
                            Name="sendMailTxtb"
-                           Text=" Send Email"
-                               FontFamily="Comic sans ms"></TextBlock>
+                           Content=" Send Email"
+                           FontFamily="Comic sans ms"
+                           Command="{Binding SendMailCommand}"
+                           Background="Transparent"
+                           ></Button>
                 </WrapPanel>
                 <WrapPanel>
                     <Image Source="../Images/customerIcon.png"
@@ -158,8 +161,9 @@
                             Content="View Bookings"
                             Height="50"
                             Margin="10,0,10,0"
-                                FontFamily="Comic sans ms"
-                                Style="{StaticResource InformButton}"></Button>
+                            FontFamily="Comic sans ms"
+                            Style="{StaticResource InformButton}"
+                            Command="{Binding BookingCommand}"></Button>
                     </Grid>
                 </StackPanel>
             </Grid>

@@ -1,6 +1,7 @@
 ﻿using CinemaStep.Command;
 using CinemaStep.Extension;
 using CinemaStep.Model;
+using CinemaStep.Repository;
 using CinemaStep.View;
 using Newtonsoft.Json;
 using System;
@@ -18,6 +19,7 @@ namespace CinemaStep.View_Model
     {
         public RelayCommand SearchCommand { get; set; }
         public RelayCommand AddCommand { get; set; }
+        public RelayCommand BackCommand { get; set; }
         private Film film;
         public Film Film
         {
@@ -64,6 +66,18 @@ namespace CinemaStep.View_Model
                 catch (Exception)
                 {
                 }
+            });
+
+            AddCommand = new RelayCommand((a) => 
+            {
+                FakeRepo.Films.Add(Helper.Film);
+            });
+
+            BackCommand = new RelayCommand((b) =>
+            {
+                addNewFilmWindow.Close();
+                ManagementView managementView = new ManagementView();
+                managementView.ShowDialog();
             });
         }
     }

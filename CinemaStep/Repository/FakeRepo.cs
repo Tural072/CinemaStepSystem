@@ -12,7 +12,9 @@ namespace CinemaStep.Repository
     {
         public static List<User> Users { get; set; } = new List<User>();
         public static User User { get; set; }
+        public static Admin Admin { get; set; }
         public static User OldUser { get; set; }
+        public static Admin OldAdmin { get; set; }
         public static ObservableCollection<Film> Films = new ObservableCollection<Film>();
 
         public static ObservableCollection<Film> GetAll() {

@@ -27,7 +27,7 @@
                     FontFamily="Comic sans ms"
                     Template="{StaticResource withoutMouseOverBack}"
                     Name="backBtn"
-                    Command="{Binding BackClickCommand}"></Button>
+                    Command="{Binding BackCommand}"></Button>
         </Grid>
         <Grid x:Name="grid"
               Grid.Row="1">
@@ -70,7 +70,7 @@
                         FontFamily="comic sans ms"
                         FontSize="24"
                         HorizontalAlignment="Right"
-                        Command="{Binding SelectedItemChangedCommand}">Add Film</Button>
+                        Command="{Binding AddCommand}">Add Film</Button>
             </StackPanel>
         </Grid>
     </Grid>

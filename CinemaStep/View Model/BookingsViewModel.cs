@@ -61,9 +61,6 @@ namespace CinemaStep.View_Model
                 bookings.timeComboBox.ItemsSource = Helper.Film.Time;
             });
 
-            ButtonCommand= new RelayCommand((s) =>
-            {
-            });
 
         }
 

@@ -32,7 +32,7 @@
                     FontFamily="Comic sans ms"
                     Template="{StaticResource withoutMouseOverBack}"
                     Name="backBtn"
-                  ></Button>
+                    Command="{Binding BackCommand}"></Button>
         </Grid>
         <Grid Grid.Row="1">
             <Grid.ColumnDefinitions>
@@ -50,15 +50,6 @@
                         <DatePicker Height="40"
                                 Margin="10,5,10,10"></DatePicker>
                     </StackPanel>
-                    <StackPanel>
-                        <TextBlock Text="Film"
-                               HorizontalAlignment="Center"
-                        
-                               FontFamily="Comic sans ms"
-                               FontSize="20"></TextBlock>
-                        <ComboBox Height="40"
-                                Margin="10,5,10,10"></ComboBox>
-                    </StackPanel>
                     <StackPanel Margin="0,0,0,135">
                         <TextBlock Text="Time"
                                HorizontalAlignment="Center"
@@ -69,24 +60,6 @@
                                   Name="timeComboBox"></ComboBox>
                     </StackPanel>
                     <StackPanel></StackPanel>
-
-                    <Grid>
-                        <Image Source="../Images/cinemaSeatIconWhite.png"
-                           Width="50"
-                           Height="38"
-                           Margin="0,0,110,0"
-                           Panel.ZIndex="1"></Image>
-                        <Button
-                    Name="viewHistoryBtn"
-                    Content="       View History"
-                    Foreground="White"
-                    Background="#2e2b30"
-                    FontSize="16"
-                    Height="45"
-                    Width="165"
-                    FontFamily="comic sans ms"
-                    Style="{StaticResource InformButton}"></Button>
-                    </Grid>
                     <Grid>
                         <Image Source="../Images/historyIcon.png"
                            Width="40"
@@ -103,7 +76,7 @@
                     Width="165"
                     FontFamily="comic sans ms"
                     Style="{StaticResource InformButton}"
-                            Command="{Binding BookSeatCommand}"></Button>
+                    Command="{Binding BookSeatCommand}"></Button>
                     </Grid>
                 </StackPanel>
             </Border>
@@ -128,20 +101,12 @@
                             <RowDefinition/>
                             <RowDefinition Height="50"/>
                         </Grid.RowDefinitions>
-                        <Button Panel.ZIndex="1" 
-                            Template="{StaticResource withoutMouseOverChair}"
-                            Background="Transparent"
-                            BorderThickness="0"
-                            Width="108"
-                            Height="99"
+                        <ToggleButton 
+                            Grid.Column="4"
                             Grid.Row="0"
-                            Grid.Column="3">
-                        </Button>
-                        <Image Width="108"
-                           Height="99"
-                           Source="../Images/cinemaSeatIconGreen.png"
-                           Grid.Row="0"
-                           Grid.Column="3"></Image>
+                            Style="{StaticResource OnOffToggleImageStyle}"
+                            Background="Transparent">
+                        </ToggleButton>
                         <Button Panel.ZIndex="1" 
                             Template="{StaticResource withoutMouseOverChair}"
                             Background="Transparent"

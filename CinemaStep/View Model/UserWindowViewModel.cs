@@ -1,6 +1,7 @@
 ﻿using CinemaStep.Command;
 using CinemaStep.Extension;
 using CinemaStep.Repository;
+using CinemaStep.Service;
 using CinemaStep.View;
 using Microsoft.Win32;
 using System;
@@ -22,6 +23,8 @@ namespace CinemaStep.View_Model
         public RelayCommand LogOutCommand { get; set; }
         public RelayCommand UploadPhotoCommand { get; set; }
         public RelayCommand EditCommand { get; set; }
+        public RelayCommand SendMailCommand { get; set; }
+        public RelayCommand BookingCommand { get; set; }
         public RelayCommand ViewFilmCommand { get; set; }
         public UserWindowViewModel(UserWindow userWindow)
         {
@@ -53,6 +56,18 @@ namespace CinemaStep.View_Model
                 EditCustomerProfile = new EditCustomerProfile();
                 FakeRepo.OldUser = FakeRepo.User;
                 EditCustomerProfile.ShowDialog();
+            });
+
+            BookingCommand = new RelayCommand((b) => 
+            {
+                Helper.UserWindow.Close();
+                Bookings bookings = new Bookings();
+                bookings.ShowDialog();
+            });
+
+            SendMailCommand = new RelayCommand((s) =>
+            {
+                SendMailService.SendMail1(FakeRepo.User.Email);
             });
         }
     }
