@@ -14,6 +14,7 @@ namespace CinemaStep.Extension
         public static UserWindow UserWindow { get; set; }
         public static ViewFilms ViewFilms { get; set; }
         public static ViewFilmsControl ViewFilmsControl { get; set; }
+        public static ManagementView managementView { get; set; }
         public static Bookings Bookings { get; set; }
         public static Film Film { get; set; }
 

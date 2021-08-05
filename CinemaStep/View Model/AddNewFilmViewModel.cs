@@ -75,8 +75,10 @@ namespace CinemaStep.View_Model
 
             BackCommand = new RelayCommand((b) =>
             {
-                addNewFilmWindow.Close();
                 ManagementView managementView = new ManagementView();
+                addNewFilmWindow.Close();
+                managementView.nameTxtb.Text = $"{FakeRepo.Admin.Name}";
+                managementView.surenameTxtb.Text = $"{FakeRepo.Admin.Surename}";
                 managementView.ShowDialog();
             });
         }

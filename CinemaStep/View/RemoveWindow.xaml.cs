@@ -16,14 +16,16 @@ using System.Windows.Shapes;
 namespace CinemaStep.View
 {
     /// <summary>
-    /// Interaction logic for EditAdminProfile.xaml
+    /// Interaction logic for RemoveWindow.xaml
     /// </summary>
-    public partial class EditAdminProfile : Window
+    public partial class RemoveWindow : Window
     {
-        public EditAdminProfile()
+        public RemoveWindow()
         {
             InitializeComponent();
-            DataContext = new EditAdminProfileViewModel(this);
+            DataContext = new RemoveViewModel(this);
         }
+
+        
     }
 }

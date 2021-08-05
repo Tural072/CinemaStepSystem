@@ -2,6 +2,22 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                     >
 
+    <ControlTemplate x:Key="withoutMouseOverSend"
+           TargetType="Button">
+        <Grid>
+            <Label VerticalAlignment="Center"
+                       HorizontalAlignment="Center"
+                       FontWeight="Light"
+                       FontSize="18"
+                       Foreground="#2e2b30"
+                       FontFamily="Comic sans ms"
+                       Content="Send Mail"></Label>
+        </Grid>
+        <ControlTemplate.Triggers>
+            <Trigger Property="IsMouseOver" Value="true">
+            </Trigger>
+        </ControlTemplate.Triggers>
+    </ControlTemplate>
 
     <ControlTemplate x:Key="withoutMouseOver"
            TargetType="Button">

@@ -88,14 +88,13 @@
                            Width="40"
                            Height="30"
                            Margin="10,0,0,0"></Image>
-                    <Button FontSize="18" 
+                    <TextBlock FontSize="18" 
                            Margin="10"
                            Name="sendMailTxtb"
-                           Content=" Send Email"
+                           Text=" Send Email"
                            FontFamily="Comic sans ms"
-                           Command="{Binding SendMailCommand}"
                            Background="Transparent"
-                           ></Button>
+                           ></TextBlock>
                 </WrapPanel>
                 <WrapPanel>
                     <Image Source="../Images/customerIcon.png"

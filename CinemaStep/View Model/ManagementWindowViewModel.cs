@@ -16,10 +16,11 @@ namespace CinemaStep.View_Model
     public class ManagementWindowViewModel : BaseViewModel
     {
         public RelayCommand AddCommand { get; set; }
-        public RelayCommand UploadCommand { get; set; }
+        public RelayCommand UploadPhotoCommand { get; set; }
         public RelayCommand LogOutCommand { get; set; }
         public RelayCommand SendMailCommand { get; set; }
         public RelayCommand EditCommand { get; set; }
+        public RelayCommand RemoveCommand { get; set; }
         public ManagementWindowViewModel(ManagementView managementView)
         {
             AddCommand = new RelayCommand((a) =>
@@ -29,7 +30,7 @@ namespace CinemaStep.View_Model
                 addNewFilmWindow.ShowDialog();
             });
 
-            UploadCommand = new RelayCommand((u) =>
+            UploadPhotoCommand = new RelayCommand((u) =>
             {
                 OpenFileDialog op = new OpenFileDialog();
                 op.Title = "Select a picture";
@@ -45,6 +46,12 @@ namespace CinemaStep.View_Model
                 SendMailService.SendMail1(FakeRepo.Admin.Email);
             });
 
+            RemoveCommand = new RelayCommand((s) =>
+            {
+                RemoveWindow removeWindow = new RemoveWindow();
+                removeWindow.ShowDialog();
+            });
+
             LogOutCommand = new RelayCommand((s) =>
             {
                 managementView.Close();
@@ -54,9 +61,9 @@ namespace CinemaStep.View_Model
 
             EditCommand = new RelayCommand((s) =>
             {
-                ManagementView managementView1 = new ManagementView();
+                EditAdminProfile editAdminProfile = new EditAdminProfile();
                 FakeRepo.OldAdmin = FakeRepo.Admin;
-                managementView1.ShowDialog();
+                editAdminProfile.ShowDialog();
             });
         }
     }

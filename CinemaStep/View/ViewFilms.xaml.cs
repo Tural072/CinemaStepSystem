@@ -27,7 +27,5 @@ namespace CinemaStep.View
             Helper.ViewFilms = this;
             DataContext = new ViewFilmsViewModel(this);
         }
-
-       
     }
 }

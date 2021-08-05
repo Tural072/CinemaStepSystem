@@ -55,7 +55,7 @@
                         Margin="10,2,10,-1.8"
                         Background="#2e2b30"
                         Foreground="LightGray"
-                            Command="{Binding UploadPhotoCommand}"
+                        Command="{Binding UploadPhotoCommand}"
                         Style="{StaticResource InformButton}">
                         </Button>
                     </Grid>
@@ -81,16 +81,18 @@
                            Text=" Surename"
                               FontFamily="Comic sans ms" ></TextBlock>
                     </WrapPanel>
-                    <WrapPanel>
+                    <WrapPanel Margin="0,-10,0,-10"> 
                         <Image Source="../Images/mailIcon.png"
                            Width="40"
                            Height="30"
                            Margin="10,0,0,0"></Image>
-                        <TextBlock FontSize="18" 
+                        <Button  
                            Margin="10"
                            Name="sendMailTxtb"
-                           Text=" Send Email"
-                               FontFamily="Comic sans ms"></TextBlock>
+                           Content=" Send Email"
+                           Command="{Binding SendMailCommand}"
+                           Background="Transparent"
+                           Template="{StaticResource withoutMouseOverSend}"></Button>
                     </WrapPanel>
                     <WrapPanel>
                         <Image Source="../Images/customerIcon.png"
@@ -115,9 +117,9 @@
                         Margin="10,0,10,0"
                         Background="#2e2b30"
                         Foreground="LightGray"
-                            Command="{Binding EditCommand}"
-                            Style="{StaticResource InformButton}"
-                            FontFamily="Comic sans ms"></Button>
+                        Command="{Binding EditCommand}"
+                        Style="{StaticResource InformButton}"
+                        FontFamily="Comic sans ms"></Button>
                     </Grid>
                 </StackPanel>
 
@@ -157,7 +159,8 @@
                             Height="50"
                             Margin="10,0,10,5"
                             FontFamily="Comic sans ms"
-                            Style="{StaticResource InformButton}"></Button>
+                            Style="{StaticResource InformButton}"
+                            Command="{Binding RemoveCommand}"></Button>
                     </Grid>
                     <Grid>
                         <Image Source="../Images/bookingIcon.png"

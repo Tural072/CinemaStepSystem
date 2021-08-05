@@ -80,6 +80,7 @@
     <Compile Include="View Model\EditCustomerProfileViewModel.cs" />
     <Compile Include="View Model\MainWindowViewModel.cs" />
     <Compile Include="View Model\ManagementWindowViewModel.cs" />
+    <Compile Include="View Model\RemoveViewModel.cs" />
     <Compile Include="View Model\SignUpControlViewModel.cs" />
     <Compile Include="View Model\UserWindowViewModel.cs" />
     <Compile Include="View Model\ViewFilmsControlViewModel.cs" />
@@ -101,6 +102,9 @@
     </Compile>
     <Compile Include="View\ManagementView.xaml.cs">
       <DependentUpon>ManagementView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="View\RemoveWindow.xaml.cs">
+      <DependentUpon>RemoveWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="View\UserWindow.xaml.cs">
       <DependentUpon>UserWindow.xaml</DependentUpon>
@@ -132,6 +136,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\ManagementView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\RemoveWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

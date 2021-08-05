@@ -1,4 +1,5 @@
-﻿using CinemaStep.View_Model;
+﻿using CinemaStep.Extension;
+using CinemaStep.View_Model;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,6 +25,7 @@ namespace CinemaStep.View
         {
             InitializeComponent();
             DataContext = new ManagementWindowViewModel(this);
+            Helper.managementView = this;
         }
     }
 }

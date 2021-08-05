@@ -15,10 +15,9 @@ namespace CinemaStep.View_Model
         public EditCustomerProfile EditCustomerProfile { get; set; }
         public RelayCommand SaveCommand { get; set; }
 
-        public RelayCommand LogoutBtn { get; set; }
+        public RelayCommand BackCommand { get; set; }
         public EditCustomerProfileViewModel(EditCustomerProfile editWindowUser)
         {
-            Helper.UserWindow = new UserWindow();
             SaveCommand = new RelayCommand((s) =>
             {
                 FakeRepo.User.Name = editWindowUser.firstNameTxtbox.Text;
@@ -33,9 +32,9 @@ namespace CinemaStep.View_Model
                 editWindowUser.oldSendMailTxtb.Text = FakeRepo.OldUser.Email;
                 Helper.UserWindow.nameTxtb.Text = $"{FakeRepo.User.Name}";
                 Helper.UserWindow.surenameTxtb.Text = $"{FakeRepo.User.Surename}";
-                editWindowUser.Close();
             });
-            LogoutBtn = new RelayCommand((l) =>
+
+            BackCommand = new RelayCommand((l) =>
             {
                 editWindowUser.Close();
             });

@@ -25,7 +25,5 @@ namespace CinemaStep.View
             InitializeComponent();
             DataContext = new UserWindowViewModel(this);
         }
-
-       
     }
 }
