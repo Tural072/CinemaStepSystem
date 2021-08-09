@@ -16,6 +16,7 @@ namespace CinemaStep.View_Model
     public class ManagementWindowViewModel : BaseViewModel
     {
         public RelayCommand AddCommand { get; set; }
+        public RelayCommand ViewCommand { get; set; }
         public RelayCommand UploadPhotoCommand { get; set; }
         public RelayCommand LogOutCommand { get; set; }
         public RelayCommand SendMailCommand { get; set; }
@@ -64,6 +65,12 @@ namespace CinemaStep.View_Model
                 EditAdminProfile editAdminProfile = new EditAdminProfile();
                 FakeRepo.OldAdmin = FakeRepo.Admin;
                 editAdminProfile.ShowDialog();
+            });
+
+            ViewCommand = new RelayCommand((v) =>
+            {
+                ViewCurrentFilms viewCurrentFilms = new ViewCurrentFilms();
+                viewCurrentFilms.ShowDialog();
             });
         }
     }

@@ -1,4 +1,6 @@
-﻿using System;
+﻿using CinemaStep.Extension;
+using CinemaStep.View_Model;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -22,6 +24,8 @@ namespace CinemaStep.View
         public ViewCurrentFilms()
         {
             InitializeComponent();
+            DataContext = new ViewCurrentFilmsViewModel(this);
+            Helper.ViewCurrentFilms = this;
         }
     }
 }

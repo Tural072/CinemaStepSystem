@@ -77,14 +77,12 @@
                     FontSize="20"
                     Name="goBtn"
                     Width="170"
-                        Command="{Binding SubmitCommand}"
+                    Command="{Binding SubmitCommand}"
                     Style="{StaticResource InformButton}"></Button>
             </StackPanel>
-
-
         </Grid>
         <Grid Grid.Row="2"
-                  Grid.Column="1">
+              Grid.Column="1">
             <Grid.RowDefinitions>
                 <RowDefinition Height="0.6*"/>
                 <RowDefinition/>
@@ -102,6 +100,5 @@
                     ></Button>
             </StackPanel>
         </Grid>
-
     </Grid>
 </Window>

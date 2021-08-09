@@ -83,6 +83,7 @@
     <Compile Include="View Model\RemoveViewModel.cs" />
     <Compile Include="View Model\SignUpControlViewModel.cs" />
     <Compile Include="View Model\UserWindowViewModel.cs" />
+    <Compile Include="View Model\ViewCurrentFilmsViewModel.cs" />
     <Compile Include="View Model\ViewFilmsControlViewModel.cs" />
     <Compile Include="View Model\ViewFilmsViewModel.cs" />
     <Compile Include="View\AddNewFilmWindow.xaml.cs">
