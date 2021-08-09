@@ -28,23 +28,24 @@ namespace CinemaStep.View_Model
         public RelayCommand ViewFilmCommand { get; set; }
         public UserWindowViewModel(UserWindow userWindow)
         {
-           Helper.UserWindow = userWindow;
-           LogOutCommand = new RelayCommand((lB) =>
-           {
-               userWindow.Close();
-               Helper.MainWindow.MainGrid.Children.RemoveAt(1);
-               Helper.MainWindow.Visibility=System.Windows.Visibility.Visible;
-           });
+            Helper.UserWindow = userWindow;
+            LogOutCommand = new RelayCommand((lB) =>
+            {
+                userWindow.Close();
+                MainWindow mainWindow=new MainWindow();
+                mainWindow.ShowDialog();
+            });
 
-           UploadPhotoCommand = new RelayCommand((u) => {
-               OpenFileDialog op = new OpenFileDialog();
-               op.Title = "Select a picture";
-               op.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
-               if (op.ShowDialog() == true)
-               {
-                   userWindow.profilePhoto.Source = new BitmapImage(new Uri(op.FileName));
-               }
-           });
+            UploadPhotoCommand = new RelayCommand((u) =>
+            {
+                OpenFileDialog op = new OpenFileDialog();
+                op.Title = "Select a picture";
+                op.Filter = "JPEG Files (*.jpeg)|*.jpeg|PNG Files (*.png)|*.png|JPG Files (*.jpg)|*.jpg|GIF Files (*.gif)|*.gif";
+                if (op.ShowDialog() == true)
+                {
+                    userWindow.profilePhoto.Source = new BitmapImage(new Uri(op.FileName));
+                }
+            });
 
             ViewFilmCommand = new RelayCommand((v) =>
             {
@@ -52,13 +53,14 @@ namespace CinemaStep.View_Model
                 ViewFilms.ShowDialog();
             });
 
-            EditCommand = new RelayCommand((e) => {
+            EditCommand = new RelayCommand((e) =>
+            {
                 EditCustomerProfile = new EditCustomerProfile();
                 FakeRepo.OldUser = FakeRepo.User;
                 EditCustomerProfile.ShowDialog();
             });
 
-            BookingCommand = new RelayCommand((b) => 
+            BookingCommand = new RelayCommand((b) =>
             {
                 Helper.UserWindow.Close();
                 Bookings bookings = new Bookings();

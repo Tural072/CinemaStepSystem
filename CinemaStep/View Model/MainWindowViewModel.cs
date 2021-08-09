@@ -21,17 +21,30 @@ namespace CinemaStep.View_Model
         public RelayCommand ExitCommand { get; set; }
         public RelayCommand SubmitCommand { get; set; }
         public ObservableCollection<Admin> Admins { get; set; } = new ObservableCollection<Admin>();
+        public ObservableCollection<User> Users { get; set; } = new ObservableCollection<User>();
+
+        public int Count { get; set; }
 
         public MainWindowViewModel(Grid grid, MainWindow mainWindow)
         {
+            UserWindow = new UserWindow();
             ManagementView managementView = new ManagementView();
             Admins = FakeRepo.GetAdmins();
             Grid = grid;
+            Users = FakeRepo.Users;
             SignUpCommand = new RelayCommand((CC) =>
             {
+                //++Count;
+                //if (Count % 2 == 0)
+                //{
+                //    Grid.Children.Remove(signUpControl);
+                //}
+                //else
+                //{
                 SignUpControl signUpControl = new SignUpControl();
                 Grid.Children.Add(signUpControl);
                 Helper.MainWindow = mainWindow;
+                //}
 
             });
 
@@ -42,24 +55,30 @@ namespace CinemaStep.View_Model
 
             SubmitCommand = new RelayCommand((b) =>
             {
-                foreach (var item in FakeRepo.Users)
+                if (FakeRepo.Users != null)
                 {
-                    if (item.Email == mainWindow.nameTxtbx.Text && item.Password == mainWindow.surenameTxtbx.Text)
+                    foreach (var item in Users)
                     {
-                        UserWindow.nameTxtb.Text = $"{item.Name}";
-                        UserWindow.surenameTxtb.Text = $"{item.Surename}";
-                        UserWindow.ShowDialog();
-                        mainWindow.Close();
+                        if (item.Email == mainWindow.nameTxtbx.Text && item.Password == mainWindow.surenameTxtbx.Text)
+                        {
+                            UserWindow.nameTxtb.Text = $"{item.Name}";
+                            UserWindow.surenameTxtb.Text = $"{item.Surename}";
+                            UserWindow.ShowDialog();
+                            mainWindow.Close();
+                        }
                     }
                 }
-                foreach (var item in Admins)
+                if (Admins != null)
                 {
-                    if (item.Email == mainWindow.nameTxtbx.Text && item.Password == mainWindow.surenameTxtbx.Text)
+                    foreach (var item in Admins)
                     {
-                        FakeRepo.Admin = item;
-                        managementView.nameTxtb.Text = item.Name;
-                        managementView.surenameTxtb.Text = item.Surename;
-                        managementView.ShowDialog();
+                        if (item.Email == mainWindow.nameTxtbx.Text && item.Password == mainWindow.surenameTxtbx.Text)
+                        {
+                            FakeRepo.Admin = item;
+                            managementView.nameTxtb.Text = item.Name;
+                            managementView.surenameTxtb.Text = item.Surename;
+                            managementView.ShowDialog();
+                        }
                     }
                 }
             });

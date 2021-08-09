@@ -109,6 +109,9 @@
     <Compile Include="View\UserWindow.xaml.cs">
       <DependentUpon>UserWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\ViewCurrentFilms.xaml.cs">
+      <DependentUpon>ViewCurrentFilms.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\ViewFilms.xaml.cs">
       <DependentUpon>ViewFilms.xaml</DependentUpon>
     </Compile>
@@ -167,6 +170,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="View\UserWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\ViewCurrentFilms.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

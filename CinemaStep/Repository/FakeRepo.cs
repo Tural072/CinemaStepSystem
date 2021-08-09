@@ -10,7 +10,7 @@ namespace CinemaStep.Repository
 {
     public static class FakeRepo
     {
-        public static List<User> Users { get; set; } = new List<User>();
+        public static ObservableCollection<User> Users { get; set; } = new ObservableCollection<User>();
         public static User User { get; set; }
         public static Admin Admin { get; set; }
         public static User OldUser { get; set; }
