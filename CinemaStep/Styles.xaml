@@ -38,10 +38,12 @@
     <ControlTemplate x:Key="withoutMouseOverChair"
            TargetType="Button">
         <ControlTemplate.Triggers>
-            <Trigger Property="IsMouseOver" Value="true">
+            <Trigger Property="IsMouseOver" Value="false">
             </Trigger>
         </ControlTemplate.Triggers>
     </ControlTemplate>
+
+   
 
     <ControlTemplate x:Key="withoutMouseOverSignUp"
            TargetType="Button">
@@ -223,5 +225,331 @@
             </Trigger>
         </Style.Triggers>
     </Style>
+    
+    <Style x:Key="OnOffToggleImageStyle1" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
+    <Style x:Key="OnOffToggleImageStyle2" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
 
+    <Style x:Key="OnOffToggleImageStyle3" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style x:Key="OnOffToggleImageStyle4" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OnOffToggleImageStyle5" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OnOffToggleImageStyle6" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OnOffToggleImageStyle7" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OnOffToggleImageStyle8" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OnOffToggleImageStyle9" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style x:Key="OnOffToggleImageStyle10" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OnOffToggleImageStyle11" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OnOffToggleImageStyle12" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OnOffToggleImageStyle13" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OnOffToggleImageStyle14" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OnOffToggleImageStyle15" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+
+    <Style x:Key="OnOffToggleImageStyle16" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+
+    <Style x:Key="OnOffToggleImageStyle17" TargetType="ToggleButton">
+        <Style.Triggers>
+            <Trigger Property="IsChecked" Value="True">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconRed.png"/>
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+            <Trigger Property="IsChecked" Value="False">
+                <Setter Property="Content">
+                    <Setter.Value>
+                        <Image Source="../Images/cinemaSeatIconGreen.png" />
+                    </Setter.Value>
+                </Setter>
+            </Trigger>
+        </Style.Triggers>
+    </Style>
+    
 </ResourceDictionary>

@@ -39,18 +39,18 @@
             </Grid.ColumnDefinitions>
             <Border BorderThickness="0.2"
                     BorderBrush="#2e2b30">
-            <StackPanel>
-                <Image Source="../Images/defaultUserIcon.png"
+                <StackPanel>
+                    <Image Source="../Images/defaultUserIcon.png"
                        Height="150"
                        Margin="5"
                        x:Name="profilePhoto"></Image>
-                <Grid>
-                    <Image Source="../Images/uploadIcon.png"
+                    <Grid>
+                        <Image Source="../Images/uploadIcon.png"
                            Width="30"
                            Height="25"
                            Margin="10,3,150,0"
                            Panel.ZIndex="1"></Image>
-                    <Button Content="  Upload Photo"
+                        <Button Content="  Upload Photo"
                         FontSize="18"
                             FontFamily="Comic sans ms"
                         Name="uploadPhotoBtn"
@@ -59,77 +59,76 @@
                         Foreground="LightGray"
                             Command="{Binding UploadPhotoCommand}"
                         Style="{StaticResource InformButton}">
-                    </Button>
-                </Grid>
-                <WrapPanel>
-                    <Image Source="../Images/UserIcon.png"
+                        </Button>
+                    </Grid>
+                    <WrapPanel>
+                        <Image Source="../Images/UserIcon.png"
                            Width="40"
                            Height="30"
                            Margin="10,0,0,0"></Image>
-                    <TextBlock FontSize="18" 
+                        <TextBlock FontSize="18" 
                            Margin="10"
                            Name="nameTxtb"
                            Text=" Name"
                            FontFamily="Comic sans ms"></TextBlock>
-                </WrapPanel>
-                <WrapPanel>
-                    <Image Source="../Images/UserIcon.png"
+                    </WrapPanel>
+                    <WrapPanel>
+                        <Image Source="../Images/UserIcon.png"
                            Width="40"
                            Height="30"
                            Margin="10,0,0,0"></Image>
-                    <TextBlock FontSize="18" 
+                        <TextBlock FontSize="18" 
                            Margin="10"
                            Name="surenameTxtb"
                            Text=" Surename"
                               FontFamily="Comic sans ms" ></TextBlock>
-                </WrapPanel>
-                <WrapPanel>
-                    <Image Source="../Images/mailIcon.png"
+                    </WrapPanel>
+                    <WrapPanel>
+                        <Image Source="../Images/mailIcon.png"
                            Width="40"
                            Height="30"
                            Margin="10,0,0,0"></Image>
-                    <TextBlock FontSize="18" 
+                        <TextBlock FontSize="18" 
                            Margin="10"
                            Name="sendMailTxtb"
                            Text=" Send Email"
                            FontFamily="Comic sans ms"
                            Background="Transparent"
                            ></TextBlock>
-                </WrapPanel>
-                <WrapPanel>
-                    <Image Source="../Images/customerIcon.png"
+                    </WrapPanel>
+                    <WrapPanel>
+                        <Image Source="../Images/customerIcon.png"
                            Width="40"
                            Height="30"
                            Margin="10,0,0,0"></Image>
-                    <TextBlock FontSize="18" 
+                        <TextBlock FontSize="18" 
                            Margin="10"
                            Name="customerTxtb"
                            Text=" Customer"
                                FontFamily="Comic sans ms"></TextBlock>
-                </WrapPanel>
-                <Grid>
-                    <Image Source="../Images/editIcon.png"
+                    </WrapPanel>
+                    <Grid>
+                        <Image Source="../Images/editIcon.png"
                            Width="30"
                            Height="25"
                            Margin="10,0,70,0"
                            Panel.ZIndex="1"></Image>
-                    <Button Content="Edit"
+                        <Button Content="Edit"
                         FontSize="18"
                         Name="editBtn"
                         Margin="10,0,10,0"
                         Background="#2e2b30"
                         Foreground="LightGray"
-                            Command="{Binding EditCommand}"
-                            Style="{StaticResource InformButton}"
-                            FontFamily="Comic sans ms"></Button>
-                </Grid>
-            </StackPanel>
-                
+                        Command="{Binding EditCommand}"
+                        Style="{StaticResource InformButton}"
+                        FontFamily="Comic sans ms"></Button>
+                    </Grid>
+                </StackPanel>
             </Border>
             <Grid Grid.Column="1">
                 <StackPanel>
                     <Image Source="../Images/backgroundUserScene.png"
-                           Height="293"
+                           Height="340"
                            >
                     </Image>
                     <Grid>
@@ -142,27 +141,11 @@
                             Foreground="LightGray"
                             FontSize="26"
                             Content="View Films"
-                            Height="50"
+                            Height="60"
                             Margin="10,0,10,10"
                             FontFamily="Comic sans ms"
-                                Command="{Binding ViewFilmCommand}"
-                                Style="{StaticResource InformButton}"></Button>
-                    </Grid>
-                    <Grid>
-                        <Image Source="../Images/bookingIcon.png"
-                           Width="40"
-                           Height="35"
-                           Margin="-10,0,215,0"
-                           Panel.ZIndex="1"></Image>
-                        <Button Background="#2e2b30"
-                            Foreground="LightGray"
-                            FontSize="26"
-                            Content="View Bookings"
-                            Height="50"
-                            Margin="10,0,10,0"
-                            FontFamily="Comic sans ms"
-                            Style="{StaticResource InformButton}"
-                            Command="{Binding BookingCommand}"></Button>
+                            Command="{Binding ViewFilmCommand}"
+                            Style="{StaticResource InformButton}"></Button>
                     </Grid>
                 </StackPanel>
             </Grid>
