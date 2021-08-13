@@ -10,7 +10,9 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media.Imaging;
 
 namespace CinemaStep.View_Model
@@ -38,6 +40,7 @@ namespace CinemaStep.View_Model
         {
             SearchCommand = new RelayCommand((sc) =>
             {
+                FakeRepo.AddNewFilmWindow.filmAddedLbl.Visibility = Visibility.Hidden;
                 Helper.Film = new Film();
                 try
                 {
@@ -71,6 +74,7 @@ namespace CinemaStep.View_Model
             AddCommand = new RelayCommand((a) => 
             {
                 FakeRepo.Films.Add(Helper.Film);
+                FakeRepo.AddNewFilmWindow.filmAddedLbl.Visibility = Visibility.Visible;
             });
 
             BackCommand = new RelayCommand((b) =>

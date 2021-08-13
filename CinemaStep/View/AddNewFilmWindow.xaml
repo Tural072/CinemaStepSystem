@@ -70,14 +70,16 @@
                            HorizontalAlignment="Center"
                            FontFamily="comic sans ms"
                            FontSize="14"
-                           Visibility="Hidden"></TextBlock>
+                           Visibility="Hidden"
+                           Name="filmAddedLbl"></TextBlock>
                 <Button Margin="0,0,10,0"
                         Style="{StaticResource InformButton}"
                         Background="White"
                         FontFamily="comic sans ms"
                         FontSize="24"
                         HorizontalAlignment="Right"
-                        Command="{Binding AddCommand}">Add Film</Button>
+                        Command="{Binding AddCommand}"
+                        >Add Film</Button>
             </StackPanel>
         </Grid>
     </Grid>

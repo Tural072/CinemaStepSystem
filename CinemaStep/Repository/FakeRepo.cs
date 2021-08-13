@@ -1,4 +1,5 @@
 ﻿using CinemaStep.Model;
+using CinemaStep.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -15,12 +16,16 @@ namespace CinemaStep.Repository
         public static Admin Admin { get; set; }
         public static User OldUser { get; set; }
         public static Admin OldAdmin { get; set; }
+        public static AddNewFilmWindow AddNewFilmWindow { get; set; } = new AddNewFilmWindow();
+
         public static ObservableCollection<Film> Films = new ObservableCollection<Film>();
 
-        public static ObservableCollection<Film> GetAll() {
+        public static ObservableCollection<Film> GetAll()
+        {
             return Films;
         }
-        public static ObservableCollection<Admin> GetAdmins() {
+        public static ObservableCollection<Admin> GetAdmins()
+        {
             return new ObservableCollection<Admin>
             {
                 new Admin
