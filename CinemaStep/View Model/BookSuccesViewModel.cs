@@ -10,20 +10,18 @@ namespace CinemaStep.View_Model
 {
     public class BookSuccesViewModel:BaseViewModel
     {
-        public RelayCommand BackCommand { get; set; }
-        public RelayCommand LogOutCommand { get; set; }
+        public RelayCommand EmailCommand { get; set; }
+        public RelayCommand CloseCommand { get; set; }
         public BookSuccesViewModel(BookSucces bookSucces)
         {
-            LogOutCommand = new RelayCommand((l) => 
+            CloseCommand = new RelayCommand((l) => 
             {
                 bookSucces.Close();
             });
 
-            BackCommand = new RelayCommand((b) => 
+            EmailCommand = new RelayCommand((b) => 
             {
-                bookSucces.Close();
-                Bookings bookings = new Bookings();
-                bookings.ShowDialog();
+               
             });
         }
     }

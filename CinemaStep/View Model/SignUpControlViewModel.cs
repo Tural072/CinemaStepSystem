@@ -43,6 +43,8 @@ namespace CinemaStep.View_Model
                 userWindow.surenameTxtb.Text = user.Surename;
                 FakeRepo.User = user;
                 FakeRepo.Users.Add(user);
+                MainWindowViewModel.DateBase.Users.Add(FakeRepo.User);
+                JsonHelper.JSONSerialization(MainWindowViewModel.DateBase);
                 Helper.MainWindow.Visibility=System.Windows.Visibility.Hidden;
                 userWindow.ShowDialog();
             });

@@ -27,14 +27,13 @@
                 <Label Foreground="White"
                        FontFamily="comic sans ms"
                        FontSize="40"
-                       Content="The Matrix"
                        Name="filmNameLbl"
                        Margin="0,9,0,0"></Label>
                 <Label Name="filmDescriptionLbl"
                        FontFamily="comic sans ms"
                        FontSize="20"
                        Foreground="White"
-                       Content="lskhjldkahshlvnalk;sjnvkasjbv"></Label>
+                       ></Label>
             </StackPanel>
             <StackPanel Grid.Row="1">
                 <WrapPanel >
@@ -42,7 +41,7 @@
                            FontFamily="comic sans ms"
                            FontSize="22"
                            Foreground="White"></Label>
-                    <Label Content="Date"
+                    <Label 
                            FontFamily="comic sans ms"
                            FontSize="22"
                            Foreground="White"></Label>
@@ -52,7 +51,7 @@
                            FontFamily="comic sans ms"
                            FontSize="22"
                            Foreground="White"></Label>
-                    <Label Content="Date"
+                    <Label 
                            FontFamily="comic sans ms"
                            FontSize="22"
                            Foreground="White"></Label>
@@ -62,7 +61,7 @@
                            FontFamily="comic sans ms"
                            FontSize="22"
                            Foreground="White"></Label>
-                    <Label Content="Date"
+                    <Label 
                            FontFamily="comic sans ms"
                            FontSize="22"
                            Foreground="White"></Label>
@@ -73,7 +72,7 @@
                            FontFamily="comic sans ms"
                            FontSize="22"
                            Foreground="White"></Label>
-                    <Label Content="Date"
+                    <Label 
                            FontFamily="comic sans ms"
                            FontSize="22"
                            Foreground="White"></Label>
@@ -86,6 +85,7 @@
                         FontFamily="comic sans ms"
                         Background="White"
                         FontSize="26"
+                        Name="bookNowBtn"
                         Style="{StaticResource InformButton}"
                         Command="{Binding BookNowCommand}"></Button>
             </StackPanel>

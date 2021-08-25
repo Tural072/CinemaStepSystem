@@ -43,6 +43,7 @@ namespace CinemaStep.View_Model
         {
             Helper.UserWindow.Visibility=System.Windows.Visibility.Hidden;
             Films = new ObservableCollection<Film>(FakeRepo.GetAll());
+            Films = MainWindowViewModel.DateBase.Films;
             BackClickCommand = new RelayCommand((b) =>
             {
                 Helper.ViewFilms.Close();
@@ -51,11 +52,12 @@ namespace CinemaStep.View_Model
 
             SelectedItemChangedCommand = new RelayCommand((SelectedItem) => 
             {
+                var film = SelectedItem as Film;
                 ViewFilmsControl viewFilmsControl = new ViewFilmsControl();
-                viewFilmsControl.filmNameLbl.Content = Helper.Film.Name;
-                viewFilmsControl.filmDescriptionLbl.Content = Helper.Film.Description;
+                viewFilmsControl.filmNameLbl.Content = film.Name;
+                viewFilmsControl.filmDescriptionLbl.Content = film.Description;
                 viewFilmsControl.imageSource.Source = new BitmapImage(new Uri(
-                Helper.Film.ImagePath, UriKind.RelativeOrAbsolute));
+                film.ImagePath, UriKind.RelativeOrAbsolute));
                 Helper.ViewFilms.grid.Children.Add(viewFilmsControl);
             });
 

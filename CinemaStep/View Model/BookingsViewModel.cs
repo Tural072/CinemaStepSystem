@@ -43,8 +43,8 @@ namespace CinemaStep.View_Model
             {
                 Helper.Bookings.Close();
                 BookSucces bookSucces = new BookSucces();
-                bookSucces.nameTxtb.Text = FakeRepo.User.Name;
-                bookSucces.filmTxtb.Text = Helper.Film.Name;
+                bookSucces.nameTxtb.Text = MainWindowViewModel.DateBase.Users[0].Name;
+                bookSucces.filmTxtb.Text = MainWindowViewModel.DateBase.Films[0].Name;
                 bookSucces.ShowDialog();
                 bookings.Close();
             });

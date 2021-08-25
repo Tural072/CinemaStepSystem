@@ -73,6 +73,9 @@ namespace CinemaStep.View_Model
 
             AddCommand = new RelayCommand((a) => 
             {
+                MainWindowViewModel.DateBase.Users = FakeRepo.Users;
+                MainWindowViewModel.DateBase.Films.Add(Helper.Film);
+                JsonHelper.JSONSerialization(MainWindowViewModel.DateBase);
                 FakeRepo.Films.Add(Helper.Film);
                 FakeRepo.AddNewFilmWindow.filmAddedLbl.Visibility = Visibility.Visible;
             });

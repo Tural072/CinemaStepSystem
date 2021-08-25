@@ -87,7 +87,8 @@
                         Width="120"
                         Height="60"
                         Style="{StaticResource InformButton}"
-                        Background="White"></Button>
+                        Background="White"
+                        Command="{Binding EmailCommand}"></Button>
                 <Button x:Name="closeBtn"
                         Content="Close"
                         FontFamily="comic sans ms"
@@ -96,7 +97,8 @@
                         Width="120"
                         Height="60"
                         Style="{StaticResource InformButton}"
-                        Background="White"></Button>
+                        Background="White"
+                        Command="{Binding CloseCommand}"></Button>
             </WrapPanel>
         </Grid>
     </Grid>

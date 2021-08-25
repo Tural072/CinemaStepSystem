@@ -65,7 +65,9 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Command\RelayCommand.cs" />
+    <Compile Include="Extension\DateBase.cs" />
     <Compile Include="Extension\Helper.cs" />
+    <Compile Include="Extension\JsonHelper.cs" />
     <Compile Include="Model\Admin.cs" />
     <Compile Include="Model\Entity.cs" />
     <Compile Include="Model\Film.cs" />

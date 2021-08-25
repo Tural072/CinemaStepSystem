@@ -9,6 +9,7 @@ using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Media.Imaging;
 
 namespace CinemaStep.View_Model
@@ -31,6 +32,7 @@ namespace CinemaStep.View_Model
         public ViewCurrentFilmsViewModel(ViewCurrentFilms viewCurrentFilms)
         {
             Films = new ObservableCollection<Film>(FakeRepo.Films);
+            Films = MainWindowViewModel.DateBase.Films;
             BackCommand = new RelayCommand((b) =>
             {
                 viewCurrentFilms.Close();
@@ -38,13 +40,15 @@ namespace CinemaStep.View_Model
 
             SelectedItemChangedCommand = new RelayCommand((s) =>
             {
-                Helper.Film.Time = new List<string>();
+                var film = s as Film;
+                //Helper.Film.Time = new List<string>();
                 ViewFilmsControl viewFilmsControl = new ViewFilmsControl();
-                viewFilmsControl.Name = Helper.Film.Name;
-                viewFilmsControl.filmDescriptionLbl.Content = Helper.Film.Description;
+                viewFilmsControl.filmNameLbl.Content = film.Name;
+                viewFilmsControl.filmDescriptionLbl.Content = film.Description;
                 viewFilmsControl.imageSource.Source = new BitmapImage(new Uri(
-                Helper.Film.ImagePath, UriKind.RelativeOrAbsolute));
-                Helper.Film = Film;
+                film.ImagePath, UriKind.RelativeOrAbsolute));
+                Film = Helper.Film;
+                viewFilmsControl.bookNowBtn.Visibility = Visibility.Hidden;
                 Helper.ViewCurrentFilms.grid.Children.Add(viewFilmsControl);
             });
         }

@@ -6,6 +6,7 @@ using CinemaStep.View;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,10 +24,16 @@ namespace CinemaStep.View_Model
         public ObservableCollection<Admin> Admins { get; set; } = new ObservableCollection<Admin>();
         public ObservableCollection<User> Users { get; set; } = new ObservableCollection<User>();
 
+        public static DateBase DateBase = new DateBase();
+
         public int Count { get; set; }
 
         public MainWindowViewModel(Grid grid, MainWindow mainWindow)
         {
+            if (File.Exists(JsonHelper.fileName))
+            {
+                JsonHelper.JSONDeSerialization(ref DateBase);
+            }
             UserWindow = new UserWindow();
             ManagementView managementView = new ManagementView();
             Admins = FakeRepo.GetAdmins();
@@ -34,18 +41,9 @@ namespace CinemaStep.View_Model
             Users = FakeRepo.Users;
             SignUpCommand = new RelayCommand((CC) =>
             {
-                //++Count;
-                //if (Count % 2 == 0)
-                //{
-                //    Grid.Children.Remove(signUpControl);
-                //}
-                //else
-                //{
                 SignUpControl signUpControl = new SignUpControl();
                 Grid.Children.Add(signUpControl);
                 Helper.MainWindow = mainWindow;
-                //}
-
             });
 
             ExitCommand = new RelayCommand((e) =>
@@ -57,7 +55,7 @@ namespace CinemaStep.View_Model
             {
                 if (FakeRepo.Users != null)
                 {
-                    foreach (var item in Users)
+                    foreach (var item in DateBase.Users)
                     {
                         if (item.Email == mainWindow.nameTxtbx.Text && item.Password == mainWindow.surenameTxtbx.Text)
                         {
