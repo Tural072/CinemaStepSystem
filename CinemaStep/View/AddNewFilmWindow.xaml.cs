@@ -1,4 +1,5 @@
-﻿using CinemaStep.Repository;
+﻿using CinemaStep.Extension;
+using CinemaStep.Repository;
 using CinemaStep.View_Model;
 using System;
 using System.Collections.Generic;
@@ -26,6 +27,7 @@ namespace CinemaStep.View
             InitializeComponent();
             DataContext = new AddNewFilmViewModel(this);
             FakeRepo.AddNewFilmWindow = this;
+            Helper.AddNewFilmWindow = this;
         }
     }
 }

@@ -3,6 +3,8 @@ using CinemaStep.Extension;
 using CinemaStep.Model;
 using CinemaStep.Repository;
 using CinemaStep.View;
+using Google.Apis.Services;
+using Google.Apis.YouTube.v3;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -34,11 +36,10 @@ namespace CinemaStep.View_Model
         public dynamic Data { get; set; }
         public dynamic SingleData { get; set; }
 
-
         HttpClient http = new HttpClient();
         public AddNewFilmViewModel(AddNewFilmWindow addNewFilmWindow)
         {
-            SearchCommand = new RelayCommand((sc) =>
+            SearchCommand = new RelayCommand(async (sc) =>
             {
                 FakeRepo.AddNewFilmWindow.filmAddedLbl.Visibility = Visibility.Hidden;
                 Helper.Film = new Film();
@@ -68,6 +69,57 @@ namespace CinemaStep.View_Model
                 }
                 catch (Exception)
                 {
+                }
+
+                var youtubeService = new YouTubeService(new BaseClientService.Initializer()
+                {
+                    ApiKey = "AIzaSyB2hJQYD-AuCQXJoHBt7XCUFz_mYCC12nU",
+                    ApplicationName = this.GetType().ToString()
+                });
+
+                var searchListRequest = youtubeService.Search.List("snippet");
+                searchListRequest.Q = $"{Helper.Film.Name}  Official Trailer"; // Replace with your search term.
+                searchListRequest.MaxResults = 1;
+
+                // Call the search.list method to retrieve results matching the specified query term.
+                var searchListResponse = await searchListRequest.ExecuteAsync();
+
+                List<string> videos = new List<string>();
+                List<string> channels = new List<string>();
+                List<string> playlists = new List<string>();
+
+                string v = "";
+
+                // Add each result to the appropriate list, and then display the lists of
+                // matching videos, channels, and playlists.
+                foreach (var searchResult in searchListResponse.Items)
+                {
+                    switch (searchResult.Id.Kind)
+                    {
+                        case "youtube#video":
+                            //   videos.Add(String.Format("{0} ({1})", searchResult.Snippet.Title, searchResult.Id.VideoId));
+                            videos.Add(searchResult.Id.VideoId);
+                            break;
+                        case "youtube#channel":
+                            channels.Add(String.Format("{0} ({1})", searchResult.Snippet.Title, searchResult.Id.ChannelId));
+                            break;
+                        case "youtube#playlist":
+                            playlists.Add(String.Format("{0} ({1})", searchResult.Snippet.Title, searchResult.Id.PlaylistId));
+                            break;
+                    }
+                }
+
+                v = videos[0];
+
+                if (Helper.AddNewFilmWindow.ChromiumBrowser.Address == null)
+                {
+                    Helper.AddNewFilmWindow.ChromiumBrowser.Address = $@"https://www.youtube.com/embed/{v}";
+                }
+
+                if (Helper.AddNewFilmWindow.ChromiumBrowser.Address != null)
+                {
+                   Helper.AddNewFilmWindow.ChromiumBrowser.Address = string.Empty;
+                   Helper.AddNewFilmWindow.ChromiumBrowser.Address = $@"https://www.youtube.com/embed/{v}";
                 }
             });
 

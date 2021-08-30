@@ -45,7 +45,7 @@ namespace CinemaStep.View_Model
                 ViewFilmsControl viewFilmsControl = new ViewFilmsControl();
                 viewFilmsControl.filmNameLbl.Content = film.Name;
                 viewFilmsControl.filmDescriptionLbl.Content = film.Description;
-                viewFilmsControl.imageSource.Source = new BitmapImage(new Uri(
+                viewFilmsControl.filmImg.Source = new BitmapImage(new Uri(
                 film.ImagePath, UriKind.RelativeOrAbsolute));
                 Film = Helper.Film;
                 viewFilmsControl.bookNowBtn.Visibility = Visibility.Hidden;

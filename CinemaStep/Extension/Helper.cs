@@ -12,6 +12,7 @@ namespace CinemaStep.Extension
     {
         public static MainWindow MainWindow { get; set; }
         public static UserWindow UserWindow { get; set; }
+        public static AddNewFilmWindow AddNewFilmWindow { get; set; } = new AddNewFilmWindow();
         public static ViewFilms ViewFilms { get; set; }
         public static ViewFilmsControl ViewFilmsControl { get; set; }
         public static ViewCurrentFilms ViewCurrentFilms { get; set; }

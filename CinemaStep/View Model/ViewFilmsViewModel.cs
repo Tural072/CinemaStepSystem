@@ -3,6 +3,8 @@ using CinemaStep.Extension;
 using CinemaStep.Model;
 using CinemaStep.Repository;
 using CinemaStep.View;
+using Google.Apis.Services;
+using Google.Apis.YouTube.v3;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -18,6 +20,7 @@ namespace CinemaStep.View_Model
     public class ViewFilmsViewModel : BaseViewModel
     {
         public RelayCommand BackClickCommand { get; set; }
+        public RelayCommand ShowTrailerCommand { get; set; }
         public RelayCommand SelectedItemChangedCommand { get; set; }
         public RelayCommand SearchCommand { get; set; }
         public RelayCommand MoreInformationCommand { get; set; }
@@ -56,14 +59,15 @@ namespace CinemaStep.View_Model
                 ViewFilmsControl viewFilmsControl = new ViewFilmsControl();
                 viewFilmsControl.filmNameLbl.Content = film.Name;
                 viewFilmsControl.filmDescriptionLbl.Content = film.Description;
-                viewFilmsControl.imageSource.Source = new BitmapImage(new Uri(
+                viewFilmsControl.filmImg.Source = new BitmapImage(new Uri(
                 film.ImagePath, UriKind.RelativeOrAbsolute));
                 Helper.ViewFilms.grid.Children.Add(viewFilmsControl);
+                Helper.Film = film;
             });
 
             
 
-         
+
         }
 
     }
