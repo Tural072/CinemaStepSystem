@@ -76,6 +76,7 @@ namespace CinemaStep.View_Model
                             managementView.nameTxtb.Text = item.Name;
                             managementView.surenameTxtb.Text = item.Surename;
                             managementView.ShowDialog();
+                            mainWindow.Close();
                         }
                     }
                 }

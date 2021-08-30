@@ -19,7 +19,6 @@ namespace CinemaStep.View_Model
         {
             BookNowCommand = new RelayCommand((b) => 
             {
-                Helper.ViewFilms.Close();
                 Bookings bookings = new Bookings();
                 bookings.ShowDialog();
             });
