@@ -63,11 +63,11 @@
                          Margin="26,0,26,6"
                          Name="nameTxtbx"
                          Template="{StaticResource TextBoxBaseControlTemplate}"></TextBox>
-                <TextBox FontSize="20"
+                <PasswordBox FontSize="20"
                          Margin="26,6,26,10"
                          FontFamily="Comic sans ms"
                          Name="surenameTxtbx"
-                         Template="{StaticResource TextBoxBaseControlTemplate}"></TextBox>
+                         Template="{StaticResource TextBoxBaseControlTemplatep}"></PasswordBox>
                 <Button Grid.Row="3"
                     Margin="26,15,26,18"
                     Content="Go"

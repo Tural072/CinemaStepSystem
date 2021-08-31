@@ -57,7 +57,7 @@ namespace CinemaStep.View_Model
                 {
                     foreach (var item in DateBase.Users)
                     {
-                        if (item.Email == mainWindow.nameTxtbx.Text && item.Password == mainWindow.surenameTxtbx.Text)
+                        if (item.Email == mainWindow.nameTxtbx.Text && item.Password == mainWindow.surenameTxtbx.Password)
                         {
                             UserWindow.nameTxtb.Text = $"{item.Name}";
                             UserWindow.surenameTxtb.Text = $"{item.Surename}";
@@ -70,7 +70,7 @@ namespace CinemaStep.View_Model
                 {
                     foreach (var item in Admins)
                     {
-                        if (item.Email == mainWindow.nameTxtbx.Text && item.Password == mainWindow.surenameTxtbx.Text)
+                        if (item.Email == mainWindow.nameTxtbx.Text && item.Password == mainWindow.surenameTxtbx.Password)
                         {
                             FakeRepo.Admin = item;
                             managementView.nameTxtb.Text = item.Name;

@@ -18,7 +18,7 @@ namespace CinemaStep.View_Model
         public ObservableCollection<Film> Films { get; set; } = new ObservableCollection<Film>();
         public RemoveViewModel(RemoveWindow removeWindow)
         {
-            Films = FakeRepo.Films;
+            Films = MainWindowViewModel.DateBase.Films;
             BackCommand = new RelayCommand((b) =>
             {
                 removeWindow.Close();
