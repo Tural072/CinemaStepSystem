@@ -129,6 +129,9 @@
     <Compile Include="View\BookSucces.xaml.cs">
       <DependentUpon>BookSucces.xaml</DependentUpon>
     </Compile>
+    <Compile Include="View\CustomMessageBox.xaml.cs">
+      <DependentUpon>CustomMessageBox.xaml</DependentUpon>
+    </Compile>
     <Compile Include="View\EditAdminProfile.xaml.cs">
       <DependentUpon>EditAdminProfile.xaml</DependentUpon>
     </Compile>
@@ -162,6 +165,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="View\BookSucces.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="View\CustomMessageBox.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

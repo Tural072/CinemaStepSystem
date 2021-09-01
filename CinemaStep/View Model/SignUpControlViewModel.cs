@@ -17,6 +17,7 @@ namespace CinemaStep.View_Model
         public MainWindow MainWindow { get; set; }
         public UserWindow userWindow { get; set; }
         public RelayCommand SubmitCommand { get; set; }
+
         private User user;
 
         public User User
@@ -50,6 +51,7 @@ namespace CinemaStep.View_Model
             });
 
 
+           
 
         }
     }

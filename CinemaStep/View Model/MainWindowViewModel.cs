@@ -10,6 +10,7 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace CinemaStep.View_Model
@@ -26,7 +27,7 @@ namespace CinemaStep.View_Model
 
         public static DateBase DateBase = new DateBase();
 
-        public int Count { get; set; }
+        int count = 0;
 
         public MainWindowViewModel(Grid grid, MainWindow mainWindow)
         {
@@ -49,6 +50,7 @@ namespace CinemaStep.View_Model
             ExitCommand = new RelayCommand((e) =>
             {
                 mainWindow.Close();
+
             });
 
             SubmitCommand = new RelayCommand((b) =>
@@ -68,6 +70,8 @@ namespace CinemaStep.View_Model
                 }
                 if (Admins != null)
                 {
+
+
                     foreach (var item in Admins)
                     {
                         if (item.Email == mainWindow.nameTxtbx.Text && item.Password == mainWindow.surenameTxtbx.Password)
@@ -77,7 +81,14 @@ namespace CinemaStep.View_Model
                             managementView.surenameTxtb.Text = item.Surename;
                             managementView.ShowDialog();
                             mainWindow.Close();
+                            return;
                         }
+                        else if (count == 0)
+                        {
+                            MessageBox.Show("Password Or Username Is Incorrect!", "Warning!", MessageBoxButton.OK, MessageBoxImage.Warning);
+                            return;
+                        }
+
                     }
                 }
             });

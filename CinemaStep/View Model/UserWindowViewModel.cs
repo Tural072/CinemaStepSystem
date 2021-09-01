@@ -9,6 +9,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
 
@@ -69,6 +70,7 @@ namespace CinemaStep.View_Model
 
             SendMailCommand = new RelayCommand((s) =>
             {
+                MessageBox.Show("Mail Sent!","Sending Mail..",MessageBoxButton.OK,MessageBoxImage.Information);
                 SendMailService.SendMail1(FakeRepo.User.Email);
             });
         }
