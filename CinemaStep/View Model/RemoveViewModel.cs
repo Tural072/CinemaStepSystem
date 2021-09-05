@@ -1,4 +1,5 @@
 ﻿using CinemaStep.Command;
+using CinemaStep.Extension;
 using CinemaStep.Model;
 using CinemaStep.Repository;
 using CinemaStep.View;
@@ -27,7 +28,9 @@ namespace CinemaStep.View_Model
             RemoveFilmCommand = new RelayCommand((r) =>
             {
                 var film = removeWindow.mainListbox.SelectedItem as Film;
-                FakeRepo.Films.Remove(film);
+                Films.Remove(film);
+                MainWindowViewModel.DateBase.Films.Remove(film);
+                JsonHelper.JSONSerialization(MainWindowViewModel.DateBase);
             });
         }
     }
